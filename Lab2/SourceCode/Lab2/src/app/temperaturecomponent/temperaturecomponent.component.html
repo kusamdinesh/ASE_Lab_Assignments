@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Weather Report</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      font-size: large;
+      width: 50%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="jumbotron" style="background-color: paleturquoise">
+    <h1 >Weather Details of the Following City : {{city}}</h1>
+  </div>
+  <div >
+  <div class="form-group">
+    <label name="state">State :</label>
+    <input type="text" width="50%" class="form-control" size="16" placeholder="Enter State" name="state" [(ngModel)]="state"/>
+  </div>
+  <div class="form-group">
+    <label name="city">City :</label>
+    <input type="text" width="50%" class="form-control" size="16" placeholder="Enter City" name="city" [(ngModel)]="city"/>
+  </div>
+  </div>
+  <input type="submit" class="btn btn-info" (click)="click1()" value="Submit">
+
+  <h2>Weather Data</h2>
+<table>
+<tr>
+  <td>Temperature in Farenheit : </td><td>{{temperatureresult.current_observation.temp_f}}</td>
+</tr>
+  <tr>
+    <td>Temperature in Celsius : </td><td>{{temperatureresult.current_observation.temp_c}}</td>
+  </tr>
+  <tr>
+    <td>Wind in KPH : </td><td>{{temperatureresult.current_observation.wind_kph}}</td>
+  </tr>
+  <tr>
+    <td>Pressure :  </td><td>{{temperatureresult.current_observation.pressure_in}}</td>
+  </tr>
+  <tr>
+    <td>Relative Humidity : </td><td>{{temperatureresult.current_observation.relative_humidity}}</td>
+  </tr>
+</table>
+
+
+  {{hourlyresult|json}}
+
+
+
+<app-hourlycomponent>  </app-hourlycomponent>
+
+
+</div>
+
+</body>
+</html>

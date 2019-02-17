@@ -1,0 +1,29 @@
+<div id="login-box">
+
+  <div class="left-box">
+    <h1><b> Sign In </b></h1>
+
+      <div class="invalidCredentials" [hidden]="invalidCredentials == null">{{invalidCredentials}}</div>
+
+      <form [formGroup]="userLoginForm" (ngSubmit)="checkValidUser()">
+        <div class="form-group is-invalid ">
+          <input type="text" formControlName="userName" class="form-control is-invalid " placeholder="Username"/>
+        </div>
+        <div class="form-group is-invalid ">
+          <input type="password" formControlName="password" class="form-control is-invalid " placeholder="Password"/>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary" [disabled]="userLoginForm.invalid" >LOGIN</button>
+        </div>
+
+      </form>
+
+    <label class="registerLabel"></label>
+    <button ><a routerLink="/register" class="btn btn-link">REGISTER</a>
+    </button>
+  </div>
+
+</div>
+
+
+

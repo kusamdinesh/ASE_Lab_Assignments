@@ -1,0 +1,32 @@
+<div class="card container" style="background: #aaaaaa;   height: 300px;
+  width: 800px;">
+
+  <div class="card-header" style="text-align: center; ">
+    <b> Details of the Item</b>
+  </div>
+
+  <div class="card-body">
+    <div *ngFor="let DetailsEle of Details.hits; let i= index">
+      <div class="row">
+        <div class="card" *ngIf="i<10">
+          <div class="card-header"><b>{{Details.hits[i].fields.item_name}}</b></div>
+          <div class="card-body">
+            <table style="font-style: oblique;">
+              <tr >
+                <td style="text-align: left;">Calories in the Item: </td>
+                <br><br>
+                <td>{{Details.hits[i].fields.nf_calories}}</td>
+              </tr>
+              <tr>
+                <td style="text-align: left;">Weight Served in grams : </td>
+                <br>
+                <td>{{Details.hits[i].fields.nf_serving_weight_grams}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,7 @@
+{
+  "name": "ionicone",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

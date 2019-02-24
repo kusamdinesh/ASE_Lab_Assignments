@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Registration
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding  text-center>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-input placeholder="First Name" [(ngModel)]="firstname" required> </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input placeholder="Last Name" [(ngModel)]="lastname" required> </ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-input placeholder="Email" [(ngModel)]="email" required> </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input placeholder="Username" [(ngModel)]="username" required> </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input placeholder="Password" type="password" [(ngModel)]="password" required></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" (click)="register()"> CreateAccount </ion-button>
+
+</ion-content>

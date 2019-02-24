@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Preview of URL
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+  <ion-content padding class="bg">    <ion-item>
+    <ion-input [(ngModel)]="sa" placeholder="Enter the text" type="text"></ion-input>
+  </ion-item>
+
+  <ion-button  (click)="add()">Enter</ion-button>
+    <ion-button (click)="getData()">Get Data</ion-button>
+
+    <ion-row>Body:{{result.body}}</ion-row>
+
+    <ion-list>
+    <ion-item-sliding *ngFor="let t of sas">
+      <ion-item>
+        {{t}}
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-button  (click)="delete(t)"></ion-button>
+          <ion-icon >Delete</ion-icon>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>

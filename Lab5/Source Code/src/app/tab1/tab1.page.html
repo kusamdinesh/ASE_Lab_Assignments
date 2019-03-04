@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Login Firebase
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding  text-center>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label >Username :</ion-label>
+      <ion-input  type="text" [(ngModel)]="emailId"  required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label >Password :</ion-label>
+      <ion-input  type="password" [(ngModel)]="password" required></ion-input>
+    </ion-item>
+  </ion-list>
+  <div padding>
+    <ion-button  (click)="signin()"> Sign-In to Account</ion-button>
+    <ion-button  (click)="register()"> Register to Account</ion-button>
+  </div>
+
+</ion-content>
+
+
